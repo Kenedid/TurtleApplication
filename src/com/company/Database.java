@@ -40,7 +40,7 @@ public class Database {
 
         } catch (SQLException e) {
             System.out.println(e.getMessage());
-            System.out.println("Error: Database error" + ((SQLException) e).getErrorCode());
+            System.out.println("Error Database: Database error" + ((SQLException) e).getErrorCode());
 
 
         }
@@ -64,6 +64,18 @@ public class Database {
         return null;
     }
 
+    public ResultSet updatetheDatabase(PreparedStatement preparedStatement){
 
+        try{
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+            connection.close();
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            System.out.println("Error Database: Update Error" +((SQLException)e).getErrorCode());
+        }
+        return null;
+    }
 
 }
