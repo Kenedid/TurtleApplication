@@ -1,4 +1,4 @@
-package com.company;
+package com.company.Model;
 
 /**
  * Created by Kenedid on 15-05-2017.

@@ -1,4 +1,6 @@
-package com.company;
+package com.company.Controller;
+
+import com.company.Model.Model;
 
 /**
  * Created by Kenedid on 11-05-2017.

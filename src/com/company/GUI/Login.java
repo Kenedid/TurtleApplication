@@ -1,4 +1,4 @@
-package com.company;
+package com.company.GUI;
 
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -8,7 +8,6 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.KeyCode;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
