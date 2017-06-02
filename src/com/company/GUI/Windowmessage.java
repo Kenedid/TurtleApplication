@@ -6,7 +6,7 @@ import javafx.stage.Stage;
 /**
  * Created by Kenedid on 11-05-2017.
  */
-public class Windowmessage extends Login{
+public class Windowmessage  {
 
 
 
