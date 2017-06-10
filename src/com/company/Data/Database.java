@@ -21,7 +21,7 @@ public class Database {
     private Connection connection = null;
 
     // Databse Variable
-    private Database database;
+    private static Database database;
 
     public Database() {
         this.connection = connection();
@@ -35,7 +35,7 @@ public class Database {
             final String Tablename = "Userstable";
             final String Tablekode = "Userstable";
 
-            return DriverManager.getConnection(DTABASE_ADDASSE, Tablename, Tablekode);
+            return DriverManager.getConnection(DTABASE_ADDASSE,Tablename,Tablekode);
 
 
         } catch (SQLException e) {
@@ -54,16 +54,20 @@ public class Database {
         return new Database();
     }
 
+    // Brug returnDatabseset til SELECT-stement fra Datarapper
+
     public ResultSet returnDatabaseSet(PreparedStatement preparedStatement){
 
         try {
             return preparedStatement.executeQuery();
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
+            System.out.println("Error Databse: ResultSet Erroor" +((SQLException)e).getMessage());
         }
         return null;
     }
 
+    // Bruge updatedatabse i alle andre sql-sætninger
     public ResultSet updatetheDatabase(PreparedStatement preparedStatement){
 
         try{
@@ -73,7 +77,7 @@ public class Database {
 
         } catch (SQLException e) {
             System.out.println(e.getMessage());
-            System.out.println("Error Database: Update Error" +((SQLException)e).getErrorCode());
+            System.out.println("Error Database: Update Error" +((SQLException)e).getMessage());
         }
         return null;
     }
