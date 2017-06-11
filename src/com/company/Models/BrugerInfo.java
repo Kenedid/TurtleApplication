@@ -1,16 +1,16 @@
-package com.company.Model;
+package com.company.Models;
 
 /**
  * Created by Kenedid on 15-05-2017.
  */
-public class Bruger {
+public class BrugerInfo {
 
     private String name;
     private int age;
     private String addrese;
     private String email;
 
-    public Bruger(String name,int age,String addrese,String email){
+    public BrugerInfo(String name, int age, String addrese, String email){
 
         this.name = name;
         this.addrese = addrese;
