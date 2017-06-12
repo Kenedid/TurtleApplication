@@ -1,6 +1,7 @@
 package com.company.GUI;
 
 import com.company.GUI.Login;
+import com.company.Models.Model;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
@@ -14,8 +15,8 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-        Login login = new Login();
-        primaryStage.setScene(login.Login(primaryStage));
-        primaryStage.show();
+
+        new Login(primaryStage,new Model());
     }
+
 }
