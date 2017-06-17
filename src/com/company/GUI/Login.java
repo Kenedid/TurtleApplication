@@ -3,6 +3,7 @@ package com.company.GUI;
 
 
 import com.company.Models.*;
+import com.sun.prism.*;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -14,6 +15,10 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+
+import javax.swing.text.html.ImageView;
+import java.awt.*;
+import java.awt.Image;
 
 /**
  * Created by Kenedid on 04-05-2017.
@@ -78,6 +83,12 @@ public class Login {
       gridPane.setHgap(20);
       gridPane.setVgap(30);
 
+
+      javafx.scene.image.Image image = new javafx.scene.image.Image("Turtle.png");
+        javafx.scene.image.ImageView view = new javafx.scene.image.ImageView();
+        view.setImage(image);
+
+
       gridPane.setPadding(new Insets(10,10,10,10));
 
       gridPane.add(login,0,4);
@@ -86,11 +97,13 @@ public class Login {
       gridPane.add(burger,0,0);
       gridPane.add(kode,0,2);
       gridPane.add(opretbruger,0,5);
+      gridPane.add(text,0,6);
+      gridPane.add(view,0,9);
       gridPane.setAlignment(Pos.CENTER);
 
        if(scene == null){
 
-           scene = new Scene(gridPane,600,400,Color.AZURE);
+           scene = new Scene(gridPane,700,900,Color.AZURE);
 
        }
 
