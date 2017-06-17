@@ -1,4 +1,4 @@
-package com.company.Data;
+package com.company.DataData;
 
 import java.sql.*;
 

@@ -3,6 +3,8 @@ package com.company.GUI;
 
 
 import com.company.Models.*;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
@@ -34,26 +36,26 @@ public class Login {
 
       this.model = model;
       login.setStyle("-fx-background-color: #0f6fe0");
+      setLoginStage();
       opretbruger.setStyle("-fx-background-color: #0be037");
-      stage.setTitle("Welcome to Turtle");
+      stage.setTitle("Welcome to Kenno-webbroswer");
        stage.setScene(scene);
 
         login.setOnAction(event -> {
-                  loginpressed(stage);});
+                  validatelogin(stage);});
         TF1.setOnKeyPressed(KeyEvent -> {
-              if(KeyEvent.getCode()== KeyCode.ENTER)loginpressed(stage);});
+              if(KeyEvent.getCode()== KeyCode.ENTER)validatelogin(stage);});
 
         PF1.setOnKeyPressed(KeyEvent-> {
-            if(KeyEvent.getCode()== KeyCode.ENTER)loginpressed(stage);
+            if(KeyEvent.getCode()== KeyCode.ENTER)validatelogin(stage);
                 });
 
         stage.show();
 
   }
 
-    public void validatelogin( Stage stage) {
-
-        if (TF1.getText().equalsIgnoreCase("Kenedid") && PF1.getText().equalsIgnoreCase("123")) {
+    private void validatelogin(Stage stage) {
+        if (TF1.getText().equalsIgnoreCase("abe") && PF1.getText().equalsIgnoreCase("123")) {
             text.setText("Infomation er rigtigt");
             text.setFill(Color.GREEN);
         } else if (TF1.getText().isEmpty()) {
@@ -67,12 +69,32 @@ public class Login {
             text.setFill(Color.RED);
         }
     }
-    public void loginpressed(Stage stage){
-        try {
-            validatelogin(stage);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+
+    private void setLoginStage(){
+
+      TF1.setPromptText("Burgernavn");
+      PF1.setPromptText("Kode");
+
+      gridPane.setHgap(20);
+      gridPane.setVgap(30);
+
+      gridPane.setPadding(new Insets(10,10,10,10));
+
+      gridPane.add(login,0,4);
+      gridPane.add(TF1,0,1);
+      gridPane.add(PF1,0,3);
+      gridPane.add(burger,0,0);
+      gridPane.add(kode,0,2);
+      gridPane.add(opretbruger,0,5);
+      gridPane.setAlignment(Pos.CENTER);
+
+       if(scene == null){
+
+           scene = new Scene(gridPane,600,400,Color.AZURE);
+
+       }
+
+
     }
 }
 
