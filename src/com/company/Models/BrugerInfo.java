@@ -1,33 +1,40 @@
 package com.company.Models;
 
+import java.text.StringCharacterIterator;
+
 /**
  * Created by Kenedid on 15-05-2017.
  */
 public class BrugerInfo {
 
-    private String name;
-    private int age;
+    private String navn;
+    private String age;
     private String addrese;
     private String email;
+    private String cpr;
 
-    public BrugerInfo(String name, int age, String addrese, String email){
+    public BrugerInfo(String cpr, String navn, String addrese, String email, String age){
 
-        this.name = name;
+        this.navn = navn;
         this.addrese = addrese;
         this.age = age;
         this.email = email;
+        this.cpr = cpr;
     }
 
-    public int getAge() {return age;
+    public String getAge() {return age;
     }
 
     public String getAddrese(){return addrese;
     }
 
+    public String getCpr(){return cpr;
+    }
+
     public String getEmail(){return email;
     }
 
-    public String getName(){return name;
+    public String getName(){return navn;
     }
 
 
@@ -39,11 +46,14 @@ public class BrugerInfo {
         this.email = email;
     }
 
-    public void setAge(int age) {
+    public void setAge(String age) {
         this.age = age;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.navn = navn;
+    }
+
+    public void setCpr(String cpr) {this.cpr= cpr;
     }
 }
