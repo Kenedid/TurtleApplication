@@ -1,6 +1,4 @@
-package com.company.Models;
-
-import java.text.StringCharacterIterator;
+package com.company.M;
 
 /**
  * Created by Kenedid on 15-05-2017.

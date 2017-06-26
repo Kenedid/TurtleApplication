@@ -2,8 +2,8 @@ package com.company.GUI;
 
 
 
-import com.company.Models.*;
-import com.sun.prism.*;
+import com.company.Controllers.OpretbrugerController;
+import com.company.M.*;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -16,15 +16,12 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-import javax.swing.text.html.ImageView;
-import java.awt.*;
-import java.awt.Image;
-
 /**
  * Created by Kenedid on 04-05-2017.
  */
 public class Login {
 
+    private OpretBruger opretBrugerclass;
     private Button login = new Button("Login");
   private TextField TF1 = new TextField();
   private PasswordField PF1 = new PasswordField();
@@ -41,7 +38,7 @@ public class Login {
 
       this.model = model;
       login.setStyle("-fx-background-color: #0f6fe0");
-      setLoginStage();
+      setLoginStage(stage);
       opretbruger.setStyle("-fx-background-color: #0be037");
       stage.setTitle("Welcome to Kenno-webbroswer");
        stage.setScene(scene);
@@ -75,7 +72,9 @@ public class Login {
         }
     }
 
-    private void setLoginStage(){
+
+
+    private void setLoginStage(Stage stage){
 
       TF1.setPromptText("Burgernavn");
       PF1.setPromptText("Kode");
@@ -87,6 +86,13 @@ public class Login {
       javafx.scene.image.Image image = new javafx.scene.image.Image("Turtle.png");
         javafx.scene.image.ImageView view = new javafx.scene.image.ImageView();
         view.setImage(image);
+
+        opretbruger.setOnAction(event -> {
+            if(opretBrugerclass == null){
+                opretBrugerclass = new OpretBruger(new OpretbrugerController(new Model()));
+            }
+            opretBrugerclass.setbruger(stage);
+        });
 
 
       gridPane.setPadding(new Insets(10,10,10,10));

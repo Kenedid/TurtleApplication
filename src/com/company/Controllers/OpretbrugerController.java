@@ -1,11 +1,8 @@
 package com.company.Controllers;
 
-import com.company.Models.Model;
-import com.company.Models.OpretBruger;
+import com.company.M.Model;
 
-import javax.net.ssl.SSLContext;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 /**
  * Created by Kenedid on 11-06-2017.

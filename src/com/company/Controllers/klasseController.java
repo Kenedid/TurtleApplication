@@ -1,6 +1,6 @@
 package com.company.Controllers;
 
-import com.company.Models.Model;
+import com.company.M.Model;
 
 /**
  * Created by Kenedid on 11-05-2017.

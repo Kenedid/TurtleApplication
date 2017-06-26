@@ -1,6 +1,6 @@
-package com.company.Models;
+package com.company.M;
 
-import com.company.DataData.*;
+import com.company.Data.*;
 
 /**
  * Created by Kenedid on 11-05-2017.

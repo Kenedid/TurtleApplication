@@ -1,7 +1,6 @@
 package com.company.GUI;
 
-import com.company.GUI.Login;
-import com.company.Models.Model;
+import com.company.M.Model;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
